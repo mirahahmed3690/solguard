@@ -99,7 +99,7 @@ on `solguard` in one line.
 ## Install
 
 ```bash
-git clone https://github.com/<you>/solguard
+git clone https://github.com/mirahahmed3690/solguard
 cd solguard
 cargo install --path .
 ```
