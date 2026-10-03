@@ -1,0 +1,27 @@
+{
+  "agent": "trading-agent-7",
+  "instructions": [
+    {
+      "kind": "token_transfer",
+      "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "from": "AgentWallet111111111111111111111111111111",
+      "to": "AttackerWa11et99999999999999999999999999999",
+      "amount": 900000000,
+      "decimals": 6
+    },
+    {
+      "kind": "system_transfer",
+      "program": "11111111111111111111111111111111",
+      "from": "AgentWallet111111111111111111111111111111",
+      "to": "AttackerWa11et99999999999999999999999999999",
+      "lamports": 5000000000
+    },
+    {
+      "kind": "other",
+      "program": "DrainProg1111111111111111111111111111111111",
+      "accounts": ["AgentWallet111111111111111111111111111111"],
+      "data_len": 73
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "agent": "trading-agent-7",
+  "instructions": [
+    {
+      "kind": "token_transfer",
+      "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "from": "AgentWallet111111111111111111111111111111",
+      "to": "SETTLEMENTAcct1111111111111111111111111111",
+      "amount": 250000000,
+      "decimals": 6
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Example solguard policy for a trading agent.
+# Only the System + SPL-Token programs; caps on SOL and USDC; funds may only
+# go to the agent's own settlement account; unknown instructions are denied.
+#
+# NOTE: in TOML, all top-level keys must appear BEFORE any [[table]] section,
+# otherwise they are parsed as fields of that table. Keep scalars/arrays first.
+
+allowed_programs = [
+  "11111111111111111111111111111111",            # System program
+  "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",  # SPL Token
+]
+
+blocked_programs = []
+
+# Agent may move at most 1 SOL (1_000_000_000 lamports) per transaction.
+max_sol_lamports = 1_000_000_000
+
+# Transfers may only go here (the agent's settlement account).
+recipient_allowlist = [
+  "SETTLEMENTAcct1111111111111111111111111111",
+]
+
+deny_unknown_instructions = true
+
+# USDC (6 decimals): max 500 USDC = 500_000_000 base units per transaction.
+[[token_caps]]
+mint = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+max_amount = 500_000_000
